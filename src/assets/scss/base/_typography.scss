@@ -1,0 +1,136 @@
+@use "../abstract/mixins" as mixins;
+@use "../abstract/variables" as variable;
+
+// Button
+.button {
+    font-size: 1.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+
+    &__red {
+        color: variable.$white;
+        background-color: variable.$redYoga;
+        border: 1px solid variable.$redYoga;
+        transition: all .2s;
+
+        &:hover {
+            color: variable.$redYoga;
+            background-color: variable.$white;
+            border: 1px solid variable.$redYoga;
+        }
+    }
+}
+
+.button_book_red {
+    font-size: 2rem;
+    color: variable.$white;
+    background-color: variable.$redYoga;
+    padding: 1.5rem 2rem;
+    border: 1px solid variable.$redYoga;
+    border-radius: 20px;
+    transition: all .2s;
+    cursor: pointer;
+
+    @include mixins.respond("lg") {
+        font-size: 2.5rem;
+    }
+
+    @include mixins.respond("md") {
+        font-size: 2rem;
+    }
+
+    @include mixins.respond("sm") {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    @include mixins.respond("xs") {
+        font-size: 1rem;
+    }
+
+    &:hover {
+        color: variable.$redYoga;
+        background-color: variable.$white;
+        border: 1px solid variable.$redYoga;
+    }
+}
+
+// Content
+.h1 {
+    font-size: 5rem;
+
+    @include mixins.respond("sm") {
+        font-size: 4rem;
+    }
+}
+
+.h2 {
+    font-size: 4rem;
+}
+
+.h3 {
+    font-size: 3.5rem;
+}
+
+.h4 {
+    font-size: 3rem;
+}
+
+.p_xl {
+    font-size: 2.8rem;
+}
+
+.p_lg {
+    font-size: 2.5rem;
+}
+
+.p_md {
+    font-size: 2.2rem;
+}
+
+.p {
+    font-size: 2rem;
+}
+
+.p_sm {
+    font-size: 1.8rem;
+}
+
+.p_slim {
+    font-size: 1.4rem;
+}
+
+// Inputs
+.input_text {
+    font-size: 2rem;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+// Link
+.link_no_style {
+    text-decoration: none;
+}
+
+.link_red {
+    text-decoration: underline;
+    color: variable.$redYoga;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+// List ul and ol
+.list_no_disk {
+    list-style: none;
+}
+
+.list {
+    margin-left: 2rem;
+}
+
+.list_item {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}

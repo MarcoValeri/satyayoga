@@ -1,0 +1,130 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+@use "../../assets/scss/abstract/variables" as variable;
+
+.nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: variable.$greyYoga;
+    padding: 0 2rem;
+
+    &__container_logo {
+        width: 10%;
+
+        @include mixins.respond("lg") {
+            width: auto;
+        }
+    }
+
+    &__logo {
+        width: 10rem;
+        height: auto;
+    }
+
+    &__container_links {
+        width: 70%;
+        text-align: center;
+
+        @include mixins.respond("lg") {
+            display: none;
+        }
+    }
+
+    &__menu_link {
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    &__link {
+        color: variable.$black;
+    }
+
+    &__container_social {
+        width: 10%;
+
+        @include mixins.respond("lg") {
+            display: none;
+        }
+    }
+
+    &__social_icon {
+        font-size: 3rem;
+    }
+
+    &__social_icon__mobile {
+        margin-right: 3rem;
+    }
+
+    &__container_lines {
+        display: none;
+
+        @include mixins.respond("lg") {
+            display: block;
+            position: relative;
+            width: 5rem;
+            height: 4rem;
+            cursor: pointer;
+        }
+    }
+
+    &__line {
+        position: absolute;
+        width: 4rem;
+        background-color: variable.$black;
+        padding: .2rem;
+        transition: all .2s ease-in-out;
+        border-radius: 50px;
+    }
+
+    &__line__one {
+        top: 20%;
+    }
+
+    &__line__one_open {
+        top: 50%;
+        transform: rotate(45deg);
+    }
+
+    &__line__two {
+        top: 40%;
+    }
+
+    &__line__two_open {
+        display: none;
+    }
+
+    &__line__three {
+        top: 60%;
+    }
+
+    &__line__three_open {
+        top: 52%;
+        transform: rotate(135deg);
+    }
+
+    &__mobile_menu_container {
+        display: none;
+        position: absolute;
+        width: 90%;
+        top: 110px;
+        left: -1000px;
+        padding: 2rem;
+        background-color: variable.$greyYoga;
+        z-index: 1;
+        transition: all .2s;
+
+        @include mixins.respond("lg") {
+            display: block;
+        }
+    }
+
+    &__mobile_menu_container__open {
+        left: 0;
+    }
+
+    &__mobile_menu_item {
+        margin-bottom: 1.5rem;
+    }
+
+}

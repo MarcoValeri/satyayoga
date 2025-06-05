@@ -1,0 +1,127 @@
+@use './../assets/scss/abstract/mixins' as mixins;
+@use './../assets/scss/abstract/variables' as variable;
+
+.home {
+    &__header {
+        position: relative;
+        height: 80vh;
+        display: flex;
+        background-color: variable.$pinkCommunityLight;
+
+        @include mixins.respond("lg") {
+            height: 60vh;
+        }
+    }
+
+    &__header-container-title {
+        width: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+
+        @include mixins.respond("lg") {
+            width: 100%;
+        }
+    }
+
+    &__header-title {
+        font-size: 12rem;
+        color: variable.$redYoga;
+        margin-bottom: 2rem;
+
+        @include mixins.respond("md") {
+            font-size: 8rem;
+        }
+
+    }
+
+    &__header-sub-title {
+        color: variable.$redYoga;
+    }
+
+    &__header-container-images {
+        width: 30%;
+        position: relative;
+        overflow: hidden;
+
+        @include mixins.respond("lg") {
+            display: none;
+        }
+    }
+
+    &__header-container-image-one {
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        width: 20vw;
+        height: 35vh;
+        z-index: 1;
+        overflow: hidden;
+        border-radius: 25%;
+
+        @include mixins.respond("xxl") {
+            top: 20%;
+            height: 30vh;
+        }
+
+        @include mixins.respond("xl") {
+            top: 23%;
+            height: 28vh;
+        }
+    }
+
+    &__header-image-one {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__header-container-image-two {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 15vw;
+        height: 15vw;
+        z-index: 2;
+        overflow: hidden;
+        border-radius: 25%;
+    }
+
+    &__header-image-two {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__main {
+        padding: 3rem;
+    }
+
+    &__main-container-title {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &__main-title {}
+
+    &__main-container-classes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10rem;
+        margin-bottom: 8rem;
+    }
+
+    &__main-container-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5rem;
+        margin-bottom: 5rem;
+    }
+
+}
