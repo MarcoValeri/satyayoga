@@ -1,0 +1,51 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+@use "../../assets/scss/abstract/variables" as variable;
+
+.cardClass {
+    width: 25rem;
+    padding: 1rem 1rem 2rem 1rem;
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.836),
+        rgba(239, 239, 239, 0.8)
+    );
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: 4px solid variable.$redYoga;
+
+    @include mixins.respond("md") {
+        width: 100%;
+    }
+
+    &__container_logo {
+        text-align: center;
+    }
+
+    &__logo {
+        width: 8rem;
+        height: auto;
+    }
+
+    &__container_title {
+        padding: 1rem 0;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__container_date {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    &__container_address {
+        text-align: center;
+        padding: 1rem 0;
+        margin-bottom: 2rem;
+    }
+
+    &__container_button {
+        text-align: center;
+        padding: 1rem 0;
+    }
+}

@@ -59,7 +59,7 @@ const Nav = () => {
                     <li className={`${styles.nav__mobile_menu_item} p_xl`}><Link href="/workshops" className={`${styles.nav__link} link_no_style`}>Workshops</Link></li>
                     <li className={`${styles.nav__mobile_menu_item} p_xl`}><Link href="/our-projects" className={`${styles.nav__link} link_no_style`}>Projects</Link></li>
                     <li className={`${styles.nav__mobile_menu_item} p_xl`}><Link href="/contact" className={`${styles.nav__link} link_no_style`}>Contact us</Link></li>
-                    <li className={styles.nav__mobile_menu_item}><a className={`${styles.nav__link} link_no_style`} href="https://www.instagram.com/Satyayogacommunity/" target="_blank"><FiInstagram className={`${styles.nav__social_icon} ${styles.nav__social_icon__mobile}`} /></a> <a className={`${styles.nav__link} link_no_style`} href="mailto:hello@satyayogacommunity.com"><TfiEmail className={styles.nav__social_icon} /></a></li>
+                    <li className={styles.nav__mobile_menu_item}><a className={`${styles.nav__link} link_no_style`} href="https://www.instagram.com/Satyayogacommunity/" target="_blank" rel="noopener noreferrer"><FiInstagram className={`${styles.nav__social_icon} ${styles.nav__social_icon__mobile}`} /></a> <a className={`${styles.nav__link} link_no_style`} href="mailto:hello@satyayogacommunity.com"><TfiEmail className={styles.nav__social_icon} /></a></li>
                 </ul>
             </div>
         </nav>

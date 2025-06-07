@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Nav from '@/components/Nav/Nav';
+import CardClass from '@/components/CardClass/CardClass';
 
 import styles from "./page.module.scss";
 
@@ -17,9 +18,6 @@ const Home = async () => {
 
     const eventbriteYogaEvents: EventbriteEvent[] = await getLastThreeEvents();
 
-    console.log(`TEST`);
-    console.log(eventbriteYogaEvents);
-
     return (
         <div className={styles.home}>
             <Nav />
@@ -30,7 +28,6 @@ const Home = async () => {
                 </div>
                 <div className={styles.home__header_container_images}>
                     <div className={styles.home__header_container_image_one}>
-                        {/* <img className="home__header-image-one" src={SatyaYogaClassAngelGroup} alt="Satya Yoga Class at Angel Studio in London" /> */}
                         <Image
                             src={SatyaYogaClassAngelGroup}
                             alt="Satya Yoga Class at Angel Studio in London"
@@ -41,7 +38,6 @@ const Home = async () => {
                         />
                     </div>
                     <div className={styles.home__header_container_image_two}>
-                        {/* <img className="home__header-image-two" src={SatyaYogaStudioOmnom} alt="Victoria teachear assisting" /> */}
                         <Image
                             src={SatyaYogaStudioOmnom}
                             alt="Victoria teachear assisting"
@@ -53,6 +49,31 @@ const Home = async () => {
                     </div>
                 </div>
             </div>
+            <main className={styles.home__main}>
+                <div className={styles.home__main_container_title}>
+                    <h3 className={`${styles.home__main_title} h1`}>Practice with us</h3>
+                </div>
+                <div className={styles.home__main_container_classes}>
+                    {
+                    eventbriteYogaEvents.length > 0
+                    &&
+                    eventbriteYogaEvents.map(event => {
+                        return (
+                            <CardClass
+                                key={event.id}
+                                title="Open Vinyasa"
+                                dateStart={event.start.local}
+                                dateEnd={event.end.local}
+                                time={event.start.local}
+                                venue={event.venue.name}
+                                buttonLink={event.url}
+                                button={"BOOK"}
+                            />
+                        )
+                    })
+                    }
+                </div>
+            </main>
         </div>
     )
 }

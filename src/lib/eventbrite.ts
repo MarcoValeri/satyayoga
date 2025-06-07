@@ -2,7 +2,8 @@ export interface EventbriteEvent {
     id: string;
     name: { text: string, html: string };
     start: { local: string };
-    summary: string;
+    end: { local: string };
+    venue: { name: string };
     url: string;
     listed: boolean;
     status: string;
@@ -23,7 +24,7 @@ export const fetchEventbriteEvents = async (): Promise<EventbriteEvent[]> => {
         return [];
     }
 
-    const url = `https://www.eventbriteapi.com/v3/organizers/${organizerId}/events/`;
+    const url = `https://www.eventbriteapi.com/v3/organizers/${organizerId}/events/?expand=venue`;
 
     try {
         const response = await fetch(url, {
