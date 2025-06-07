@@ -1,0 +1,48 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+@use "../../assets/scss/abstract/variables" as variable;
+
+.mission {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: variable.$redYoga;
+    padding: 5rem 0;
+    margin-bottom: 5rem;
+
+    @include mixins.respond("md") {
+        flex-direction: column;
+    }
+    
+    &__container_logo {
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: variable.$white;
+        text-align: center;
+        background-image: url('../../assets/images/lotus-flowers-white.png');
+        background-size: contain;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        padding: 6rem 2rem 3rem 2rem;
+
+        @include mixins.respond("md") {
+            width: auto;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__container_content {
+        width: 65%;
+        padding: 0 2rem;
+
+        @include mixins.respond("md") {
+            width: auto;
+        }
+    }
+
+    &__content {
+        color: variable.$white;
+        margin-bottom: 2rem;
+    }
+}

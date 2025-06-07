@@ -4,6 +4,8 @@ import Nav from '@/components/Nav/Nav';
 import CardClassSkeleton from '@/components/CardClassSkeleton/CardClassSkeleton';
 import EventbriteYogaEvents from '@/components/EventbriteYogaEvents/EventbriteYogaEvents';
 import LinkSquare from '@/components/LinkSquare/LinkSquare';
+import Founders from '@/components/Founders/Founders';
+import Mission from '@/components/Mission/Mission';
 
 import styles from "./page.module.scss";
 
@@ -75,6 +77,8 @@ const Home = () => {
                     />
                 </div>
             </main>
+            <Founders />
+            <Mission />
         </div>
     )
 }
