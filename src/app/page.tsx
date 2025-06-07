@@ -1,22 +1,15 @@
+import { Suspense } from 'react';
 import Image from 'next/image';
 import Nav from '@/components/Nav/Nav';
-import CardClass from '@/components/CardClass/CardClass';
+import CardClassSkeleton from '@/components/CardClassSkeleton/CardClassSkeleton';
+import EventbriteYogaEvents from '@/components/EventbriteYogaEvents/EventbriteYogaEvents';
 
 import styles from "./page.module.scss";
 
 import SatyaYogaClassAngelGroup from '@/assets/images/satya-yoga-class-angel-group.webp';
 import SatyaYogaStudioOmnom from '@/assets/images/satya-yoga-studio-omnom.webp';
 
-import { fetchEventbriteEvents, EventbriteEvent } from '@/lib/eventbrite';
-
-const getLastThreeEvents = async () => {
-    const allEvents = await fetchEventbriteEvents();
-    return allEvents.slice(0, 3);
-}
-
-const Home = async () => {
-
-    const eventbriteYogaEvents: EventbriteEvent[] = await getLastThreeEvents();
+const Home = () => {
 
     return (
         <div className={styles.home}>
@@ -51,27 +44,20 @@ const Home = async () => {
             </div>
             <main className={styles.home__main}>
                 <div className={styles.home__main_container_title}>
-                    <h3 className={`${styles.home__main_title} h1`}>Practice with us</h3>
+                    <h3 className="h1">Practice with us</h3>
                 </div>
                 <div className={styles.home__main_container_classes}>
-                    {
-                    eventbriteYogaEvents.length > 0
-                    &&
-                    eventbriteYogaEvents.map(event => {
-                        return (
-                            <CardClass
-                                key={event.id}
-                                title="Open Vinyasa"
-                                dateStart={event.start.local}
-                                dateEnd={event.end.local}
-                                time={event.start.local}
-                                venue={event.venue.name}
-                                buttonLink={event.url}
-                                button={"BOOK"}
-                            />
-                        )
-                    })
-                    }
+                    <Suspense fallback={
+                        <>
+                            <CardClassSkeleton />
+                            <CardClassSkeleton />
+                            <CardClassSkeleton />
+                        </>
+                    }>
+                        <EventbriteYogaEvents
+                            eventsNumber={3}
+                        />
+                    </Suspense>
                 </div>
             </main>
         </div>

@@ -3,7 +3,7 @@ import { formatTime, formatLongDate, getDurationFromTwoDates } from "@/util/date
 
 import styles from "./CardClass.module.scss";
 
-import LotusFlowersRedSmall from "@/assets/images/lotus-flowers-red-yoga-small.png"
+import LotusFlowersRedSmall from "@/assets/images/lotus-flowers-red-yoga-small.png";
 
 interface CardClassProps {
     title: string;
