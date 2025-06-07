@@ -1,0 +1,14 @@
+@use "../../assets/scss/abstract/variables" as variable;
+
+.linkSquare {
+    color: variable.$redYoga;
+    text-decoration: none;
+    padding: .5rem 4rem;
+    border: 3px solid variable.$redYoga;
+    transition: all .2s;
+
+    &:hover {
+        transform: translate(-2px, -2px);
+        box-shadow: 10px 10px 5px variable.$redYoga;
+    }
+}

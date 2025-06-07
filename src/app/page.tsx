@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Nav from '@/components/Nav/Nav';
 import CardClassSkeleton from '@/components/CardClassSkeleton/CardClassSkeleton';
 import EventbriteYogaEvents from '@/components/EventbriteYogaEvents/EventbriteYogaEvents';
+import LinkSquare from '@/components/LinkSquare/LinkSquare';
 
 import styles from "./page.module.scss";
 
@@ -58,6 +59,20 @@ const Home = () => {
                             eventsNumber={3}
                         />
                     </Suspense>
+                </div>
+                <div className={styles.home__main_container_buttons}>
+                    <LinkSquare
+                        url="/classes"
+                        content="Classes"
+                    />
+                    <LinkSquare
+                        url="/workshops"
+                        content="Workshops"
+                    />
+                    <LinkSquare
+                        url="/our-projects"
+                        content="Projects"
+                    />
                 </div>
             </main>
         </div>
