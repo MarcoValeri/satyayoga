@@ -1,0 +1,52 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+
+.classes {
+    padding: 0 5rem;
+
+    &__container_loading {
+        text-align: center;
+        margin: 0 auto 10rem auto;
+    }
+
+    &__loading_title {
+        margin-bottom: 2rem;
+    }
+
+    &__container_title {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &__container_content {
+        width: 70%;
+        margin: 0 auto 10rem auto;
+
+        @include mixins.respond("lg") {
+            width: auto;
+        }
+    }
+
+    &__content {
+        margin-bottom: 2rem;
+    }
+
+    @include mixins.respond("md") {
+        padding: 0 1rem;
+    }
+
+    &__container_classes {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 2rem;
+        margin: 0 auto 10rem auto;
+
+        @include mixins.respond("lg") {
+            width: 100%;
+        }
+    }
+
+    // &__container_class {
+    //     margin-bottom: 2rem;
+    // }
+}

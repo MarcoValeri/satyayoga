@@ -1,0 +1,36 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+@use "../../assets/scss/abstract/variables" as variable;
+
+.linkBook {
+    font-size: 3rem;
+    color: variable.$white;
+    background-color: variable.$redYoga;
+    padding: 1.5rem 2rem;
+    border: 1px solid variable.$redYoga;
+    border-radius: 20px;
+    transition: all .2s;
+    cursor: pointer;
+
+    @include mixins.respond("lg") {
+        font-size: 2.5rem;
+    }
+
+    @include mixins.respond("md") {
+        font-size: 2rem;
+    }
+
+    @include mixins.respond("sm") {
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    @include mixins.respond("xs") {
+        font-size: 1rem;
+    }
+
+    &:hover {
+        color: variable.$redYoga;
+        background-color: variable.$white;
+        border: 1px solid variable.$redYoga;
+    }
+}

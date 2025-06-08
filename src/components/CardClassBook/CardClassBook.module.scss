@@ -1,0 +1,128 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+@use "../../assets/scss/abstract/variables" as variable;
+
+.cardClassBook {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-bottom: 4px solid variable.$redYoga;
+
+    @include mixins.respond("xs") {
+        flex-direction: column;
+    }
+
+    &__container_info {
+        width: 20%;
+        border-right: 2px solid variable.$black;
+
+        @include mixins.respond("lg") {
+            width: 30%;
+        }
+
+        @include mixins.respond("xs") {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 1rem;
+            border-right: none;
+        }
+    }
+
+    &__date {
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+
+        @include mixins.respond("md") {
+            font-size: 2rem;
+        }
+
+        @include mixins.respond("sm") {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__time {
+        font-size: 2.5rem;
+        font-weight: 700;
+
+        @include mixins.respond("md") {
+            font-size: 2rem;
+        }
+
+        @include mixins.respond("sm") {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__container_data {
+        width: 50%;
+        padding-left: 1rem;
+        
+        @include mixins.respond("xs") {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+
+    &__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+
+        @include mixins.respond("md") {
+            font-size: 2rem;
+        }
+
+        @include mixins.respond("sm") {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__teacher {
+        font-size: 2rem;
+
+        @include mixins.respond("md") {
+            font-size: 1.5rem;
+        }
+
+        @include mixins.respond("sm") {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__location {
+        font-size: 2rem;
+
+        @include mixins.respond("md") {
+            font-size: 1.5rem;
+        }
+
+        @include mixins.respond("sm") {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__map_icon {
+        font-size: 2rem;
+        color: variable.$redYoga;
+
+        @include mixins.respond("md") {
+            font-size: 1.5rem;
+        }
+
+        @include mixins.respond("sm") {
+            font-size: 1.2rem;
+        }
+    }
+
+    &__container_book {
+        width: 20%;
+        
+        @include mixins.respond("xs") {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

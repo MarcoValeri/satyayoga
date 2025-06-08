@@ -4,6 +4,7 @@ export interface EventbriteEvent {
     start: { local: string };
     end: { local: string };
     venue: { name: string };
+    format: { name: string };
     url: string;
     listed: boolean;
     status: string;
@@ -24,7 +25,7 @@ export const fetchEventbriteEvents = async (): Promise<EventbriteEvent[]> => {
         return [];
     }
 
-    const url = `https://www.eventbriteapi.com/v3/organizers/${organizerId}/events/?expand=venue`;
+    const url = `https://www.eventbriteapi.com/v3/organizers/${organizerId}/events/?expand=venue,format,category`;
 
     try {
         const response = await fetch(url, {

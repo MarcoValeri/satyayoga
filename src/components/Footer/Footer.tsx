@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
                 <div>
                     <ul className={`list_no_disk`}>
-                        <li className={styles.footer__nav_link_social}><a className={`${styles.footer__link} link_no_style`} href="https://www.instagram.com/Satyayogacommunity/" target="_blank"rel="noopener noreferrer"><FiInstagram className={styles.footer__social_icon} /></a></li>
+                        <li className={styles.footer__nav_link_social}><a className={`${styles.footer__link} link_no_style`} href="https://www.instagram.com/Satyayogacommunity/" target="_blank" rel="noopener noreferrer"><FiInstagram className={styles.footer__social_icon} /></a></li>
                         <li className={styles.footer__nav_link_social}><a className={`${styles.footer__link} link_no_style`} href="mailto:hello@satyayogacommunity.com"><TfiEmail className={styles.footer__social_icon} /></a></li>
                     </ul>
                 </div>
