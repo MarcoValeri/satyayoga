@@ -6,6 +6,8 @@ import EventbriteYogaEvents from '@/components/EventbriteYogaEvents/EventbriteYo
 import LinkSquare from '@/components/LinkSquare/LinkSquare';
 import Founders from '@/components/Founders/Founders';
 import Mission from '@/components/Mission/Mission';
+import Community from '@/components/Community/Community';
+import Footer from '@/components/Footer/Footer';
 
 import styles from "./page.module.scss";
 
@@ -79,6 +81,8 @@ const Home = () => {
             </main>
             <Founders />
             <Mission />
+            <Community />
+            <Footer />
         </div>
     )
 }

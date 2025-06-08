@@ -1,0 +1,184 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+@use "../../assets/scss/abstract/variables" as variable;
+
+.community {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    @include mixins.respond("lg") {
+        height: 80vh;
+    }
+
+    &__container_pink {
+        width: 100%;
+        height: 15rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: variable.$pinkCommunity;
+
+        @include mixins.respond("md") {
+            height: 40vh;
+        }
+    }
+
+    &__container_purple {
+        width: 50%;
+        height: 10rem;
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        background-color: variable.$pinkYogaLight;
+
+        @include mixins.respond("lg") {
+            left: 90%;
+        }
+
+        @include mixins.respond("md") {
+            width: 100%;
+            top: 75%;
+        }
+    }
+
+    &__container_content {
+        width: 90%;
+        height: 80%;
+        position: relative;
+        top: 5%;
+        margin: 5rem auto 0 auto;
+    }
+
+    &__container_content_image {
+        width: 90%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2rem;
+        grid-template-areas:
+                            "community__container_single_image_1 community__container_single_image_2 community__container_single_image_3"
+                            "community__container_single_image_4 community__container_single_image_5 community__container_single_image_6";
+        z-index: 1;
+
+        @include mixins.respond("lg") {
+            width: 100%;
+            height: 80%;
+            top: 0%;
+            display: block;
+            overflow: hidden;
+        }
+
+        @include mixins.respond("md") {
+            height: 70%;
+            top: 10%;
+        }
+    }
+
+    &__container_single_image_1 {
+        grid-area: community__container_single_image_1;
+    }
+
+    &__container_single_image_2 {
+        grid-area: community__container_single_image_2;
+    }
+
+    &__container_single_image_3 {
+        grid-area: community__container_single_image_3;
+    }
+
+    &__container-single-image-4 {
+        grid-area: community__container_single_image_4;
+    }
+
+    &__container-single-image-5 {
+        grid-area: community__container_single_image_5;
+    }
+
+    &__container-single-image-6 {
+        grid-area: community__container_single_image_6;
+    }
+
+    &__container_single_image {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 15%;
+        box-shadow: 10px 10px 5px variable.$pinkCommunityLight;
+
+        @include mixins.respond("lg") {
+            height: 100%;
+        }
+    }
+
+    &__container_single_image__show {
+        display: block;
+    }
+
+    &__container_single_image__hide {
+        display: none;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__container_content_wording {
+        width: 10%;
+        position: absolute;
+        top: 10%;
+        right: 0;
+        text-align: center;
+        text-wrap: nowrap;
+        transform: rotate(90deg);
+
+        @include mixins.respond("lg") {
+            width: 100%;
+            top: -6%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @include mixins.respond("md") {
+            top: 0;
+        }
+    }
+
+    &__wording {
+        font-size: 6rem;
+        z-index: 1;
+
+        @include mixins.respond("xl") {
+            font-size: 4rem;
+        }
+
+        @include mixins.respond("md") {
+            font-size: 3rem;
+        }
+    }
+
+    &__container_arrows {
+        position: absolute;
+        width: 100%;
+        bottom: 5%;
+        display: none;
+
+        @include mixins.respond("lg") {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+
+    &__arrow {
+        font-size: 4rem;
+        color: variable.$redYoga;
+        cursor: pointer;
+    }
+}
