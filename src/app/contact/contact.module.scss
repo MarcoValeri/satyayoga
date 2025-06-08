@@ -1,0 +1,32 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+@use "../../assets/scss/abstract/variables" as variable;
+
+.contact {
+    margin-bottom: 10rem;
+
+    &__container_content {
+        padding: 0 10rem;
+
+        @include respond("md") {
+            padding: 0 2rem;
+        }
+    }
+
+    &__container_content_title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__title {
+        margin-bottom: 1rem;
+    }
+
+    &__heart {
+        font-size: 5rem;
+        color: $redYoga;
+    }
+
+    &__content {
+        margin-bottom: 2rem;
+    }
+}

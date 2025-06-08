@@ -1,0 +1,41 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+
+.workshop {
+    padding: 0 2rem 10rem 2rem;
+
+    &__container_title {
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    &__container_workshops {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 2rem;
+        row-gap: 5rem;
+    }
+
+    &__card_item {
+        animation: fade-in 1s ease-in-out;
+
+        @include mixins.respond("md") {
+            width: 100%;
+        }
+    }
+
+    &__container_button {
+        text-align: center;
+        margin: 5rem 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
