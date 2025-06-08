@@ -1,0 +1,21 @@
+.header {
+    padding: 5rem 0;
+    margin-bottom: 5rem;
+
+    &__container_title {
+        height: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url('../../assets/images/lotus-flowers-red.png');
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        text-align: center;
+    }
+
+    &__title {
+        font-size: 6rem;
+        margin-top: 5rem;
+    }
+}

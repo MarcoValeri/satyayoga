@@ -1,0 +1,36 @@
+@use "../../assets/scss/abstract/mixins" as mixins;
+
+.about {
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        column-gap: 5rem;
+        grid-template-areas: "about__container_content about__container_offering";
+        padding: 0 5rem;
+        margin-bottom: 5rem;
+
+        @include mixins.respond("md") {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                                "about__container_content"
+                                "about__container_offering";
+            column-gap: 0;
+            row-gap: 5rem;
+            padding: 0 2rem;
+        }
+    }
+
+    &__container_content {
+        grid-area: about__container_content;
+    }
+
+    &__content {
+        margin-bottom: 2rem;
+    }
+
+    &__container_offering {
+        grid-area: about__container_offering;
+    }
+
+}
