@@ -4,7 +4,7 @@ import Nav from "@/components/Nav/Nav";
 
 import { FaHeart } from "react-icons/fa";
 
-import styles from "./Contact.module.scss";
+import styles from "./contact.module.scss";
 
 const Contact = () => {
     return (

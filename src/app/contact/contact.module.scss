@@ -7,7 +7,7 @@
     &__container_content {
         padding: 0 10rem;
 
-        @include respond("md") {
+        @include mixins.respond("md") {
             padding: 0 2rem;
         }
     }
@@ -23,7 +23,7 @@
 
     &__heart {
         font-size: 5rem;
-        color: $redYoga;
+        color: variable.$redYoga;
     }
 
     &__content {
