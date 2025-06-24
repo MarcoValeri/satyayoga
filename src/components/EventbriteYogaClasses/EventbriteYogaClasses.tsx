@@ -14,6 +14,7 @@ const getAllClasses = async () => {
 const EventbriteYogaClasses = async () => {
 
     const getEventbriteYogaClasses: EventbriteEvent[] = await getAllClasses();
+    console.log(getEventbriteYogaClasses);
 
     return (
         <>
